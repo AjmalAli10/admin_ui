@@ -14,7 +14,7 @@ const PaginationListData = ({
         onClick={(e) => handleItemInPagination(e, index + 1)}
         className={className}
       >
-        <a href="#">{index + 1}</a>
+        <button href="#">{index + 1}</button>
       </li>
     );
   });

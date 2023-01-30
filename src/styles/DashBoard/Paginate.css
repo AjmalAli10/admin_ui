@@ -12,7 +12,7 @@
   display: flex;
 }
 
-.pagination-item a {
+.pagination-item button {
   display: flex;
   padding: 15px;
   align-items: center;
@@ -26,18 +26,18 @@
   
 }
 
-.pagination-list-item-disabled a {
+.pagination-list-item-disabled button {
   color: #999;
   cursor: not-allowed;
   border-color: var(--gray-03);
 }
 
-.pagination-list-item-active a {
+.pagination-list-item-active button {
   background-color: blue;
   color: #fff;
 }
 
-.pagination-list-item-icon a > span {
+.pagination-list-item-icon button > span {
   font-size: var(--fs-03);
 }
 

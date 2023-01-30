@@ -1,4 +1,4 @@
-import { userData_API, user_per_page } from "../config/config.js";
+import { userAPIData, userPerPage } from "../config/config.js";
 import { useReducer, useEffect, useRef } from "react";
 import { initial_State_Element, usersReducer } from "../reducers/usersReducer";
 import Loading from "./Loading";
@@ -7,13 +7,13 @@ import UsersDataTable from "./UsersDataTable";
 import axios from "axios";
 import Paginate from "./Paginate";
 import SelctedUserDeleteButton from "./SelctedUserDeleteButton";
-import GetError from "./GetError";
+import ErrorBoundery from "./ErrorBoundery";
 import UserEditDialog from "./UserEditDialog";
-import "../styles/DashBoard/MainDashBoard.css";
+import "../styles/DashBoard/DashBoard.css";
 
-const MainDashboard = () => {
+const Dashboard = () => {
   const [state, dispatch] = useReducer(usersReducer, initial_State_Element);
-  const totalPageNo = Math.ceil(state.users.length / user_per_page);
+  const totalPageNo = Math.ceil(state.users.length / userPerPage);
   const inputNameRef = useRef(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const MainDashboard = () => {
   const getUsersData = async () => {
     dispatch({ type: "REQUEST_INITIATED" });
     try {
-      const response = await axios.get(userData_API);
+      const response = await axios.get(userAPIData);
       const allUsers = response.data;
       dispatch({ type: "REQUESTING_USER_DATA_SUCCESS", payload: allUsers });
     } catch (error) {
@@ -82,7 +82,7 @@ const MainDashboard = () => {
       {state.isLoadingUsers ? (
         <Loading />
       ) : state.error.code ? (
-        <GetError error_msg={state.error} />
+        <ErrorBoundery error_msg={state.error} />
       ) : (
         elementsOfUI
       )}
@@ -90,4 +90,4 @@ const MainDashboard = () => {
   );
 };
 
-export default MainDashboard;
+export default Dashboard;

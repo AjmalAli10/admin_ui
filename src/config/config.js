@@ -1,4 +1,4 @@
-const userData_API =
+const userAPIData =
   "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json";
-  const user_per_page = 10;
-export {userData_API, user_per_page};
+  const userPerPage = 10;
+export {userAPIData, userPerPage};

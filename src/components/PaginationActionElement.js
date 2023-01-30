@@ -21,35 +21,35 @@ const PaginationActionElement = ({
   return (
     <>
       <li className={className_Of_Prev_Page}>
-        <a href="#" onClick={(e) => handleItemInPagination(e, startingPageNo)}>
+        <button href="#" onClick={(e) => handleItemInPagination(e, startingPageNo)}>
           <span className="material-symbols-outlined">
             start
           </span>
-        </a>
+        </button>
       </li>
       <li className={className_Of_Prev_Page}>
-        <a
+        <button
           href="#"
           onClick={(e) => handleItemInPagination(e, instantPage - 1)}
         >
           <span className="material-symbols-outlined">prev</span>
-        </a>
+        </button>
       </li>
       {children}
       <li className={className_Of_Next_Page}>
-        <a
+        <button
           href="#"
           onClick={(e) => handleItemInPagination(e, instantPage + 1)}
         >
           <span className="material-symbols-outlined">next</span>
-        </a>
+        </button>
       </li>
       <li className={className_Of_Next_Page}>
-        <a href="#" onClick={(e) => handleItemInPagination(e, lastPageNo)}>
+        <button href="#" onClick={(e) => handleItemInPagination(e, lastPageNo)}>
           <span className="material-symbols-outlined">
             end
           </span>
-        </a>
+        </button>
       </li>
     </>
   );

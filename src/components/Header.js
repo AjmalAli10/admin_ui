@@ -1,6 +1,6 @@
-import "../styles/Header/HeaderElement.css";
+import "../styles/Header/Header.css";
 
-const HeaderElement = () => {
+const Header = () => {
   return (
     <header className="header">
       <h2 className="header-title">Geektrust Admin UI Challenge</h2>
@@ -8,4 +8,4 @@ const HeaderElement = () => {
   );
 };
 
-export default HeaderElement;
+export default Header;

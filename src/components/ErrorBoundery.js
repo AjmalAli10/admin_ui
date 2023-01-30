@@ -1,6 +1,6 @@
 import '../styles/Error/GetError.css';
 
-const GetError = ({ error_msg }) => {
+const ErrorBoundery = ({ error_msg }) => {
   return (
     <div className="error-msg-container">
       <h2 className="error-message">
@@ -12,4 +12,4 @@ const GetError = ({ error_msg }) => {
   );
 }
 
-export default GetError;
+export default ErrorBoundery;

@@ -1,12 +1,12 @@
 import './App.css';
-import HeaderElement from './components/HeaderElement';
-import MainDashboard from './components/MainDashboard';
+import Header from './components/Header';
+import MainDashboard from './components/Dashboard';
 import "./styles/mediaQueries/media.css"; 
 
 function App() {
   return (
     <div className="App">
-      <HeaderElement />
+      <Header />
       <MainDashboard />
     </div>
   );

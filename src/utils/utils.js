@@ -1,8 +1,8 @@
-import { user_per_page } from "../config/config";
+import { userPerPage } from "../config/config";
 
 const getCurrentPageUsersData = (all_users, currentPage, isAllUsersSelected) => {
-  const starting_index_no = currentPage * user_per_page - user_per_page;
-  const ending_index_no = currentPage * user_per_page;
+  const starting_index_no = currentPage * userPerPage - userPerPage;
+  const ending_index_no = currentPage * userPerPage;
   return all_users
     .slice(starting_index_no, ending_index_no)
     .map((userData) => ({ ...userData, selected: isAllUsersSelected }));
@@ -47,7 +47,7 @@ const currentPageUpdateOnDelete = (
   const updatedUsersData = usersDataDelete(users_Data, target_Users_Data, allUsers_Data);
   if (
     updatedUsersData.length <=
-    current_Page_No * user_per_page - user_per_page
+    current_Page_No * userPerPage - userPerPage
   ) {
     return current_Page_No - 1;
   }
