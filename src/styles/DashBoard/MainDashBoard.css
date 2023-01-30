@@ -20,29 +20,39 @@
   background-color: var(--danger-main);
   color: var(--text-light);  
   border-radius: var(--spacing-11);
-  font-size: var(--fs-05);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-11);
+  position: relative;
+  top: -60px;
+  width: 120px;
+  height: 50px;
+  margin-left: 2rem;
+  color:  rgb(119, 119, 185);
 }
 
 .delete_all_selected_btn_users:disabled,
 .delete_all_selected_btn_users:disabled:hover,
 .delete_all_selected_btn_users:disabled:focus,
 .delete_all_selected_btn_users:disabled:active  {
-  background-color: gray;
-  color: white;
+  background-color: white;
   cursor: not-allowed;
+  width: 120px;
+  height: 50px;
+  color:  rgb(119, 119, 185);
 }
 
 .delete_all_selected_btn_users > span {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .delete_all_selected_btn_users:hover,
 .delete_all_selected_btn_users:focus,
 .delete_all_selected_btn_users:active {
+  width: 120px;
+  height: 50px;
+  color: white;
   background-color: red;
 }
 

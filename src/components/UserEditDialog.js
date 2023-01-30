@@ -42,7 +42,7 @@ const UserEditDialog = React.forwardRef((props, ref) => {
       <div className="dialog-box-container">
         <div className="dialog">
           <div className="dialog-header">
-            <h2 className="dialog-header-heading">Edit "{user.name}" Data</h2>
+            <h2 className="dialog-header-heading">Edit "{user.name}"</h2>
             <button
               className="dialog-header-btn"
               onClick={hanldeCancelDialog}

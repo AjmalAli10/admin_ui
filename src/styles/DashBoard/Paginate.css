@@ -33,7 +33,7 @@
 }
 
 .pagination-list-item-active a {
-  background-color: var(--primary-dark);
+  background-color: blue;
   color: #fff;
 }
 
